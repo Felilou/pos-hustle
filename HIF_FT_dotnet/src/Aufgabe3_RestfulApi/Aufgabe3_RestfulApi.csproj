@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Spg.Fachtheorie.Aufgabe2\Spg.Fachtheorie.Aufgabe2.csproj" />
+    <ProjectReference Include="../Aufgabe2_Services/Aufgabe2_Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
