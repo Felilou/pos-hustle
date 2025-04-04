@@ -21,5 +21,6 @@
         <module>Aufgabe1_ORMapping</module>
         <module>Aufgabe2_Services</module>
         <module>Aufgabe3_RestfulAPI</module>
+        <module>Ensure_Lombok</module>
     </modules>
 </project>
