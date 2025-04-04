@@ -17,6 +17,7 @@
     </properties>
 
     <modules>
+        <module>_SpringBootParent</module>
         <module>Aufgabe1_ORMapping</module>
         <module>Aufgabe2_Services</module>
         <module>Aufgabe3_RestfulAPI</module>
