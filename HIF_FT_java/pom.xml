@@ -19,7 +19,7 @@
     <modules>
         <module>_SpringBootParent</module>
         <module>Aufgabe1_ORMapping</module>
-        <module>Aufgabe2_Services</module>
+        <module>Aufgabe2_BusinessService</module>
         <module>Aufgabe3_RestfulAPI</module>
         <module>Ensure_Lombok</module>
     </modules>

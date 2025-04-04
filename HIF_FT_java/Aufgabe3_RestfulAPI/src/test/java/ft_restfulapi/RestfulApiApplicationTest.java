@@ -1,13 +1,13 @@
-package at.spengergasse.hif.ft.aufgabe2;
+package ft_restfulapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Aufgabe2ServiceApplicationTest {
+class RestfulApiApplicationTest {
 
     @Test
     void contextLoads() {
-        // successful when no exception occurs
+        // successful when no exception is throw
     }
 }

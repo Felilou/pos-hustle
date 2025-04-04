@@ -21,7 +21,7 @@ Will be about implementing some business
 logic calculations using mostly basic
 language features.
 
-No persistence and no frontend needs to be
+No ft_ormapping.persistence and no frontend needs to be
 implemented.
 
 Generate the required test data inside
@@ -34,7 +34,7 @@ A RESTful API implementation. Show case
 your skills in implementing and testing
 a RESTful API.
 
-No persistence implementation is expected.
+No ft_ormapping.persistence implementation is expected.
 
 Generate the required test data inside your
 tests.

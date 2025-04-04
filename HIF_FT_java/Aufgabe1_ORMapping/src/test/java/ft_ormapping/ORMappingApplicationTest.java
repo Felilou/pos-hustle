@@ -1,10 +1,10 @@
-package at.spengergasse.hif.ft.aufgabe1;
+package ft_ormapping;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Aufgabe1OrMappingApplicationTest {
+class ORMappingApplicationTest {
 
     @Test
     void contextLoads() {

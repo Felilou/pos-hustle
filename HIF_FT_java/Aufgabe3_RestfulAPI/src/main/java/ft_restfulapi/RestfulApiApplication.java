@@ -1,13 +1,13 @@
-package at.spengergasse.hif.ft.aufgabe3;
+package ft_restfulapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Aufgabe3RestfulApiApplication {
+public class RestfulApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Aufgabe3RestfulApiApplication.class, args);
+        SpringApplication.run(RestfulApiApplication.class, args);
     }
 
 }

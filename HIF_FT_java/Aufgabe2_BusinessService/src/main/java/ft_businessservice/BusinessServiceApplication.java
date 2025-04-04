@@ -1,13 +1,13 @@
-package at.spengergasse.hif.ft.aufgabe1;
+package ft_businessservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Aufgabe1OrMappingApplication {
+public class BusinessServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Aufgabe1OrMappingApplication.class, args);
+        SpringApplication.run(BusinessServiceApplication.class, args);
     }
 
 }
