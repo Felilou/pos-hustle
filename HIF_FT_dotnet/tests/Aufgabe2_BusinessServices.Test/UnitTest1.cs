@@ -1,4 +1,4 @@
-﻿namespace Aufgabe2_Services.Test;
+﻿namespace Aufgabe2_BusinessServices.Test;
 
 public class UnitTest1
 {

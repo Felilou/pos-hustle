@@ -11,7 +11,7 @@
         <relativePath>../_SpringBootParent</relativePath>
     </parent>
 
-    <artifactId>Aufgabe3_RestfulAPI</artifactId>
+    <artifactId>Aufgabe3_RestfulApi</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>

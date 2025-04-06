@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe1_ORMapping", "src\Aufgabe1_ORMapping\Aufgabe1_ORMapping.csproj", "{AD5788DA-E48E-4453-A662-9284458220E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe2_Services", "src\Aufgabe2_Services\Aufgabe2_Services.csproj", "{3DDFA7C4-16A9-463C-9CFA-985D59E65424}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe2_BusinessServices", "src\Aufgabe2_BusinessServices\Aufgabe2_BusinessServices.csproj", "{3DDFA7C4-16A9-463C-9CFA-985D59E65424}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe3_RestfulApi", "src\Aufgabe3_RestfulApi\Aufgabe3_RestfulApi.csproj", "{6E447BDD-F97C-4CB9-AACF-E52314901AA2}"
 EndProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0C88DD14
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe1_ORMapping.Test", "tests\Aufgabe1_ORMapping.Test\Aufgabe1_ORMapping.Test.csproj", "{46C9FCF8-FC62-46BF-833F-3CBD34A7FD37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe2_Services.Test", "tests\Aufgabe2_Services.Test\Aufgabe2_Services.Test.csproj", "{74F35E2D-BAFB-44CF-B3B7-4F0F075786FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe2_BusinessServices.Test", "tests\Aufgabe2_BusinessServices.Test\Aufgabe2_BusinessServices.Test.csproj", "{74F35E2D-BAFB-44CF-B3B7-4F0F075786FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aufgabe3_RestfulApi.Test", "tests\Aufgabe3_RestfulApi.Test\Aufgabe3_RestfulApi.Test.csproj", "{8D7A9C2C-16A0-4FB1-8A60-DE2D129C5427}"
 EndProject
