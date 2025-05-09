@@ -23,4 +23,8 @@
         <module>Aufgabe3_RestfulApi</module>
         <module>Ensure_Lombok</module>
     </modules>
+
+    <build>
+        <defaultGoal>clean dependency:go-offline verify</defaultGoal>
+    </build>
 </project>
