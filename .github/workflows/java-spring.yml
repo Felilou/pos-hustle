@@ -21,12 +21,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 23
+    - name: Set up JDK
       uses: actions/setup-java@v4
       with:
-        java-version: '23'
+        java-version: '24'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
       working-directory: ./HIF_FT_java
       run: ./mvnw -B package --file pom.xml
+
