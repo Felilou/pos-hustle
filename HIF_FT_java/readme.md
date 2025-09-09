@@ -2,12 +2,14 @@
 # HIF Fachtheorie Seed
 
 A seed project to be used for
-HIF Fachtheorie examinations.
+HIF Fachtheorie examinations when
+implementing using the **Java** &trade; and
+**Spring** &trade; stack.
 
 
 There are three parts - each meant to be solved independently.
-The project definitions include all required dependencies and a fist test
-to check its validity.
+The project definitions include all required dependencies and 
+a fist test to check its validity.
 
 
 ## Part1 / Aufgabe 1
@@ -72,6 +74,9 @@ A project used as Maven parent for the other projects.
 Directory: [./_SpringBootParent](./_SpringBootParent)
 
 Project definition: [_SpringBootParent/pom.xml](./_SpringBootParent/pom.xml)
+
+It holds all required and shared **Maven** project
+definitions for the *Aufgabe* projects.
 
 You can ignore it.
 
