@@ -5,7 +5,7 @@
   <ItemGroup>
     <PackageVersion Include="Bogus" Version="35.6.4" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.9" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.10" />
     <PackageVersion Include="NSubstitute" Version="5.3.0" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="9.0.6" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
