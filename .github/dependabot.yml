@@ -5,11 +5,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "maven" # See documentation for possible values
-    directory: "/HIF_FT_java" # Location of package manifests
+  - package-ecosystem: "maven"
+    directory: "/HIF_FT_java"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "nuget" # See documentation for possible values
-    directory: "/HIF_FT_dotnet" # Location of package manifests
+  - package-ecosystem: "gradle"
+    directory: "/HIF_FT_kotlin"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "nuget"
+    directory: "/HIF_FT_dotnet"
     schedule:
       interval: "weekly"
