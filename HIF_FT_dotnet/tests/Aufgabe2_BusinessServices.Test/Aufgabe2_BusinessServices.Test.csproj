@@ -3,6 +3,7 @@
     <PropertyGroup>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+		<BaseOutputPath>C:\Scratch\Aufgabe2_Test</BaseOutputPath>
     </PropertyGroup>
 
     <ItemGroup>

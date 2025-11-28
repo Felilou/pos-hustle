@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <InvariantGlobalization>true</InvariantGlobalization>
+	<BaseOutputPath>C:\Scratch\Aufgabe3</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
