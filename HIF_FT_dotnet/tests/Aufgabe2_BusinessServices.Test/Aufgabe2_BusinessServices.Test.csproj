@@ -3,8 +3,15 @@
     <PropertyGroup>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-		<BaseOutputPath>C:\Scratch\Aufgabe2_Test</BaseOutputPath>
     </PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+		<BaseOutputPath>C:\Scratch\Aufgabe2_Test\</BaseOutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+		<BaseOutputPath>$(MSBuildProjectDirectory)/../../artifacts/</BaseOutputPath>
+	</PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk"/>

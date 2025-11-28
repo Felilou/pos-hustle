@@ -3,9 +3,15 @@
     <PropertyGroup>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-		<BaseOutputPath>C:\Scratch\Aufgabe3_Test</BaseOutputPath>
     </PropertyGroup>
 
+	<PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+		<BaseOutputPath>C:\Scratch\Aufgabe3_Test\</BaseOutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+		<BaseOutputPath>$(MSBuildProjectDirectory)/../../artifacts/</BaseOutputPath>
+	</PropertyGroup>
+	
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing"/>
         <PackageReference Include="Microsoft.NET.Test.Sdk"/>
