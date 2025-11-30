@@ -4,7 +4,13 @@ using Xunit.Abstractions;
 
 namespace Aufgabe1_ORMapping.Test;
 
+[CollectionDefinition("Sequential")]
+public class SequentialCollection {
+    // Intentionally empty. Using a fixture type is optional here.
+    // The presence of this definition allows using [Collection("Sequential")] on test classes.
+}
 
+// Tests within the same collection never run in parallel!
 [Collection("Sequential")]
 public class Aufgabe1Test
 {
