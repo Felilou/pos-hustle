@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>Aufgabe1_ORMapping</artifactId>
+    <packaging>jar</packaging> <!-- it is the default -->
 
     <dependencies>
         <dependency>
