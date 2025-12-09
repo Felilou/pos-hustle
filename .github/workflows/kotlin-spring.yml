@@ -3,8 +3,12 @@ name: CI for Kotlin using gradle
 on:
   push:
     branches: [ "main", "feature/**" ]
+    paths:
+      - "HIF_FT_kotlin/**"
   pull_request:
     branches: [ "main", "feature/**" ]
+    paths:
+      - "HIF_FT_kotlin/**"
 
 jobs:
   build:

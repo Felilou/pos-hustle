@@ -6,8 +6,12 @@ name: .NET
 on:
   push:
     branches: [ "main", "feature/**" ]
+    paths:
+      - "HIF_FT_dotnet/**"
   pull_request:
     branches: [ "main", "feature/**" ]
+    paths:
+      - "HIF_FT_dotnet/**"
 
 jobs:
   build:
