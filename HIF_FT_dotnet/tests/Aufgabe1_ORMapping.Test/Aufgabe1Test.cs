@@ -24,7 +24,7 @@ public class Aufgabe1Test
     private AppDbContext GetEmptyDbContext()
     {
         var options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseSqlite(@"Data Source=:memory:")
+            .UseSqlite(@"Data Source=app.db")
             .LogTo(output.WriteLine)
             .EnableSensitiveDataLogging()
             .EnableDetailedErrors()
