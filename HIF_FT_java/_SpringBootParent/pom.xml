@@ -25,7 +25,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
-        <maven-build-cache-extension.version>1.2.1</maven-build-cache-extension.version>
     </properties>
 
     <dependencies>
@@ -177,12 +176,5 @@
                 </configuration>
             </plugin>
         </plugins>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.extensions</groupId>
-                <artifactId>maven-build-cache-extension</artifactId>
-                <version>${maven-build-cache-extension.version}</version>
-            </extension>
-        </extensions>
     </build>
 </project>
