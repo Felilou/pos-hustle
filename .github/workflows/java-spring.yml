@@ -25,13 +25,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v5
+
     - name: Set up JDK
       uses: actions/setup-java@v5
       with:
         java-version: '25'
         distribution: 'temurin'
         cache: maven
+
     - name: Build with Maven
       working-directory: ./HIF_FT_java
       run: ./mvnw -B package --file pom.xml
 
+    - name: Build ZIP for distribution
+      run: |
+        rm HIF_FT_java.zip
+        zip -v -r HIF_FT_java.zip HIF_FT_java/ -x "HIF_FT_java/target" "HIF_FT_java/target/**" "HIF_FT_java/**/target/**" "HIF_FT_java/.idea" "HIF_FT_java/.idea/**" "HIF_FT_java/.git" "HIF_FT_java/.git/**"
