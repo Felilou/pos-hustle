@@ -1,0 +1,43 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: POS exam for Java and Spring
+
+on:
+  push:
+    branches: [ "main", "feature/**" ]
+    paths:
+      - "POS_exam_java/**"
+  pull_request:
+    branches: [ "main", "feature/**" ]
+    paths:
+      - "POS_exam_java/**"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+
+    - name: Set up JDK
+      uses: actions/setup-java@v5
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build with Maven
+      working-directory: ./POS_exam_java
+      run: ./mvnw -B package --file pom.xml
+
+    - name: Build ZIP for distribution
+      run: |
+        rm -fv POS_exam_java.zip
+        zip -v -r POS_exam_java.zip POS_exam_java/ -x "POS_exam_java/target" "POS_exam_java/target/**" "POS_exam_java/**/target/**" "POS_exam_java/.idea" "POS_exam_java/.idea/**" "POS_exam_java/.git" "POS_exam_java/.git/**"

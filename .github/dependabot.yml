@@ -6,7 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "maven"
-    directory: "/HIF_FT_java"
+    directory: "/POS_exam_java"
     schedule:
       interval: "weekly"
   - package-ecosystem: "gradle"
