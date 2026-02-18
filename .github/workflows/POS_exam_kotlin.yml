@@ -1,0 +1,32 @@
+
+name: CI for POS exam Kotlin and Spring
+
+on:
+  push:
+    branches: [ "main", "feature/**" ]
+    paths:
+      - "POS_exam_kotlin/**"
+  pull_request:
+    branches: [ "main", "feature/**" ]
+    paths:
+      - "POS_exam_kotlin/**"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+
+    - name: Set up JDK
+      uses: actions/setup-java@v5
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Build with Gradle
+      working-directory: ./POS_exam_kotlin
+      run: ./gradlew -i build --no-daemon
+

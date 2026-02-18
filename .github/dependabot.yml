@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "gradle"
-    directory: "/HIF_FT_kotlin"
+    directory: "/POS_exam_kotlin"
     schedule:
       interval: "weekly"
   - package-ecosystem: "nuget"
