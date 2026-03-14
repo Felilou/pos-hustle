@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Aufgabe1_ORMapping.Infrastructure;
 
-// Todo: Entity Person only for demonstration, should be replaced with actual entities!
+// Todo: Entity Person only for demonstration, must be replaced with actual entities!
 public class Person
 {
     public int Id { get; set; }
