@@ -1,4 +1,4 @@
-package ormapping;
+package ormapping.model;
 
 import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotNull;
@@ -10,7 +10,7 @@ import org.hibernate.validator.constraints.Length;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class FirstName {
+public class LastName {
 
     @Length(min=0, max=50)
     @Pattern(regexp = "^[a-zA-ZäöüÄÖÜß .\\-]+$")
@@ -18,7 +18,7 @@ public class FirstName {
     private String value;
 
     @Builder(access = AccessLevel.PUBLIC)
-    protected FirstName(String value) {
+    protected LastName(String value){
         this.value = value;
     }
 

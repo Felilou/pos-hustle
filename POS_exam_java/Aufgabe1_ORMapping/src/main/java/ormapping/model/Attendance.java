@@ -1,4 +1,4 @@
-package ormapping;
+package ormapping.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -32,7 +32,7 @@ public class Attendance extends AbstractPersistable<Long> {
     @NotNull
     private Attendee attendee;
 
-    @Builder(access = AccessLevel.PROTECTED)
+    @Builder(access = AccessLevel.PUBLIC)
     protected Attendance(LocalDate date, LocalTime begin, LocalTime end, String note, Attendee attendee) {
         this.date = date;
         this.begin = begin;

@@ -1,4 +1,4 @@
-package ormapping;
+package ormapping.model;
 
 import lombok.Getter;
 

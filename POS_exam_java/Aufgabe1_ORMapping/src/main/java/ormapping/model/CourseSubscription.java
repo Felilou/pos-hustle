@@ -1,4 +1,4 @@
-package ormapping;
+package ormapping.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
