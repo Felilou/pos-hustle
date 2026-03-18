@@ -6,9 +6,9 @@ import lombok.*;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Getter
-@Setter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Course extends AbstractPersistable<Long> {
@@ -20,10 +20,9 @@ public class Course extends AbstractPersistable<Long> {
     @NotNull
     private String description;
 
-    @ManyToOne(cascade = CascadeType.PERSIST, optional = false)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(nullable = false)
     @NotNull
-    @Setter(AccessLevel.NONE)
     private Speaker heldBy;
 
     @Enumerated(EnumType.STRING)
@@ -39,29 +38,19 @@ public class Course extends AbstractPersistable<Long> {
         this.description = description;
         this.covers = covers;
         this.beginDate = beginDate;
-
-        setSpeaker(heldBy);
+        setHeldBy(heldBy);
     }
 
-    public void setSpeaker(Speaker newSpeaker) {
-        if (newSpeaker == null) {
-            throw new IllegalArgumentException("heldBy darf nicht null sein");
+    public void setHeldBy(@NotNull Speaker speaker) {
+        Objects.requireNonNull(speaker);
+        if (Objects.equals(this.heldBy, speaker)) return;
+        if (this.heldBy != null) {
+            this.heldBy.removeCourse(this);
         }
-        if (this.heldBy == newSpeaker) {
-            return;
+        this.heldBy = speaker;
+        if (!speaker.getCourses().contains(this)) {
+            speaker.addCourse(this);
         }
-
-        Speaker oldSpeaker = this.heldBy;
-        this.heldBy = newSpeaker;
-
-        if (oldSpeaker != null) {
-            oldSpeaker.removeCourseInternal(this);
-        }
-        newSpeaker.addCourseInternal(this);
-    }
-
-    public void removeSpeaker() {
-        throw new IllegalStateException("Ein Course muss immer einem Speaker zugeordnet sein");
     }
 
 }

@@ -6,12 +6,12 @@ import lombok.*;
 
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
 @Getter
-@Setter
 public class Speaker extends User{
 
     @NotNull
@@ -31,10 +31,6 @@ public class Speaker extends User{
         super(lastName, firstName, email);
         this.primaryTopic = primaryTopic;
         this.secondaryTopic = secondaryTopic;
-
-        if (courses != null) {
-            courses.forEach(this::addCourse);
-        }
     }
 
     public Set<Course> getCourses() {
@@ -42,26 +38,15 @@ public class Speaker extends User{
     }
 
     public void addCourse(@NotNull Course course) {
-        if (course == null) return;
-        course.setSpeaker(this);
+        Objects.requireNonNull(course);
+        if (courses.add(course)) {
+            course.setHeldBy(this);
+        }
     }
 
     public void removeCourse(@NotNull Course course) {
-        if (course == null) return;
-        if (course.getHeldBy() == this) {
-            throw new IllegalStateException("Course kann nicht entfernt werden, solange kein neuer Speaker gesetzt wurde");
-        }
-        courses.remove(course);
-    }
-
-    // package-private: nur von Course.setSpeaker aufgerufen
-    void addCourseInternal(Course course) {
-        courses.add(course);
-    }
-
-    // package-private: nur von Course.setSpeaker aufgerufen
-    void removeCourseInternal(Course course) {
-        courses.remove(course);
+        Objects.requireNonNull(course);
+        courses.removeIf(c -> c == course);
     }
 
 }

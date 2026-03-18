@@ -79,33 +79,34 @@ class SpeakerCourseRelationTest {
     }
 
     @Test
-    void setSpeaker_switchesSpeaker() {
+    void setHeldBy_switchesSpeaker() {
         // Kurs von speaker1 auf speaker2 wechseln
-        course.setSpeaker(speaker2);
+        course.setHeldBy(speaker2);
 
         assertThat(course.getHeldBy()).isEqualTo(speaker2);
         assertThat(speaker2.getCourses()).contains(course);
     }
 
     @Test
-    void setSpeaker_removesFromOldSpeaker() {
+    void setHeldBy_removesFromOldSpeaker() {
         // Nach dem Wechsel darf speaker1 den Kurs nicht mehr haben
-        course.setSpeaker(speaker2);
+        course.setHeldBy(speaker2);
 
         assertThat(speaker1.getCourses()).doesNotContain(course);
     }
 
     @Test
-    void removeCourse_withoutReplacement_throws() {
-        assertThatThrownBy(() -> speaker1.removeCourse(course))
-                .isInstanceOf(IllegalStateException.class)
-                .hasMessageContaining("kein neuer Speaker");
+    void removeCourse_removesCourseFromSpeaker() {
+        // removeCourse entfernt den Kurs aus dem Set des Speakers
+        speaker1.removeCourse(course);
+
+        assertThat(speaker1.getCourses()).doesNotContain(course);
     }
 
     @Test
-    void setSpeaker_sameSpearker_noChange() {
+    void setHeldBy_sameSpeaker_noChange() {
         // Nochmals denselben Speaker setzen — keine Änderung
-        course.setSpeaker(speaker1);
+        course.setHeldBy(speaker1);
 
         assertThat(course.getHeldBy()).isEqualTo(speaker1);
         assertThat(speaker1.getCourses()).containsOnlyOnce(course);
