@@ -31,6 +31,7 @@ public class Speaker extends User{
         super(lastName, firstName, email);
         this.primaryTopic = primaryTopic;
         this.secondaryTopic = secondaryTopic;
+        courses.forEach(this::addCourse);
     }
 
     public Set<Course> getCourses() {
